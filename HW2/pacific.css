@@ -1,0 +1,123 @@
+/*
+File: pacific.css
+GUI Assignment: Style a Site with External CSS
+Bradley Legg, UMass Lowell Computer Science, bradley_legg@student.uml.edu
+Copyright (c) 2021 by Wenjin. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+*/
+
+header, hgroup, nav, footer, figure, figcaption, aside, section, article {
+	/* all of the noted elements are displated in the block format, starts on
+	newline and takes up it's width */
+	display: block;
+}
+#wrapper{
+	min-width: 600px;
+	height: 750px;
+	width: 75%;
+	/* margin left and right auto centers the wrapper */
+	margin-left: auto;
+	margin-right: auto;
+}
+body {
+	background-color: #00569f;
+	/* places the gradient background, fading into body bgcolor */
+	background-image: url("ptrbackground.jpg");
+	color: #666666;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	min-width: 1021px;
+}
+nav {
+	background-color: #90c8e3;
+	height: 85%;
+	min-height: 600px;
+	/* total width: 100% of wrapper parent from 32% width nav,
+	60% width #content, and #context's 8% padding-left */
+	width: 32%;
+	min-width: 185px;
+	float: left;
+}
+nav ul {
+	font-size: 1.2em;
+	font-weight: bold;
+	/* removes bullet points */
+	list-style: none;
+	margin-left: 10%;
+	padding: 0;
+}
+a {
+	/* removes link underline */
+	text-decoration: none;
+	color: #000a33;
+}
+/* visited links show this color */
+nav a:visited {
+	color: #344873;
+}
+/* links hovered over with the mouse show this color */
+nav a:hover {
+	color: #FFFFFF;
+}
+/* links are this color */
+nav a:link {
+	color: #000033
+}
+h1 {
+	margin-bottom: 0;
+	padding: 2%;
+	color: white;
+	text-align: left;
+	background-image: url("sunset.jpg");
+	background-color: #000032;
+	/* pushes the image to the right of its "box" */
+	background-position: right;
+	/* prevents the image from repeating */
+	background-repeat: no-repeat;
+	width: 96%;
+}
+#content {
+	width: 60%;
+	height: 80%;
+	margin: auto;
+	/* gives space between the leftmost side and the nav */
+	padding-left: 8%;
+	/* allows content to sit next to the nav */
+	display: inline-block;
+	background-color: white;
+}
+h2 {
+	color: #3399CC;
+}
+h1,
+h2 {
+	font-family: Georgia, "Times New Roman", serif;
+}
+.resort {
+	font-weight: bold;
+	color: #3399CC;
+}
+p {
+	/* % padding pushes the text left to match the desired output images */
+	padding-right: 25%;
+}
+#contact {
+	font-size: 90%;
+}
+/* selects only li elements in the #content parent div */
+#content li {
+	list-style-image: url(marker.gif);
+}
+dt {
+	color: #000033;
+}
+/* I made a mistake somewhere, I suspect involving the content div,
+and was unable to format the footer as well as I would have wanted */
+footer {
+	font-family: Georgia, "Times New Roman", serif;
+	/* display inline-block lets the footer sit next to nav */
+	display: inline-block;
+	background-color: white;
+	width: 68%;
+	padding: 0;
+}
