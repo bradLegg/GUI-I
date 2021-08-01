@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<!-- Author: Bradley R. Legg, UMass Lowell Computer Science, bradley_legg@student.uml.edu
+a. Bradley R. Legg
+b. 31 July 2021
+c. Webpage used to show a dynamic multipliation table written in JS
+   with error handling.
+-->
+
+<!-- specifies the language of the page will be in english with an ISO lang. code -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- viewport used to control the website dimensions/scaling across resolution
+         sizes, works with bootstrap-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Brad's Dynamic Multiplication Table</title>
+    <!-- linking css stylesheets and js file for generating the multipl. table -->
+    <link rel="stylesheet" href="pageStyle.css">
+    <link rel="stylesheet" href="tableStyle.css">
+    <script src="multiTable.js"></script>
+  </head>
+  <body>
+    <div id="page">
+      <center>
+        <div id="topNavbar">
+          <ul>
+            <!-- https://hatchful.shopify.com/ logo created using hatchful, asset is free to use -->
+            <li><a href="https://hatchful.shopify.com/" target="_blank"><img class="logo-class BL" src="Images/logo_resized_cropped.png" alt="Logo"></a></li>
+            <li><h1 id="title">Dynamic Multiplication Table</h1></li>
+            <!-- https://github.com/logos free to use logo from github, linked to repository -->
+            <li><a href="https://computerscienceman.github.io/GUI-I/HW3/" target="_blank"><img class="logo-class GH" src="Images/GitHub-Mark-Light-64px.png" alt="Git"></a></li>
+          </ul>
+        </div>
+        <!-- form placed in container for clarity -->
+        <div class="basic-container">
+          <h2>Inputs <span class="emphasis">must</span> be integers between -50 and 50.</h2>
+          <p><span class="italics">Blank inputs are treated as zero</span></p>
+          <p>Min-Cols (Minimum-Columns) implies a range of multiplication table columns starting at the entered value.</p>
+          <p>Max-Cols (Maximum-Columns) implies a range of multiplication table columns ending at the entered value.</p>
+          <p>Min-Rows (Minimum-Rows) implies a range of multiplication table rows starting at the entered value.</p>
+          <p>Max-Rows (Maximum-Rows) implies a range of multiplication table rows ending at the entered value.</p>
+          <p>Note: Min-Cols is less than or equal to Max-Cols & Min-Rows is less than or equal to Max-Rows.
+          <!-- HTML form to allow user input into the dynamic multiplicaiton table -->
+          <form>
+            <div class="form-group">
+              <label>Min-Cols:</label>
+              <input type="text" id="minCols">
+            </div>
+            <div class="form-group">
+              <label>Max-Cols:</label>
+              <input type="text" id="maxCols">
+            </div>
+            <div class="form-group">
+              <label>Min-Rows:</label>
+              <input type="text" id="minRows">
+            </div>
+            <div class="form-group">
+              <label>Max-Rows:</label>
+              <input type="text" id="maxRows">
+            </div>
+            <button class="button" type="button" onclick="return generateTable();">Generate Table</button>
+            <div id="errorMsg"></div>
+          </form>
+        </div>
+      </center>
+      <table id="multiTable"></table>
+      <!-- adding some simple whitespace for spacing -->
+      <br></br>
+    </div>
+  </body>
+</html>
