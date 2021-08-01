@@ -1,0 +1,177 @@
+/*
+  Author: Bradley R. Legg, UMass Lowell Computer Science, bradley_legg@student.uml.edu
+  a. Bradley R. Legg
+  b. 31 July 2021
+  c. Webpage used to show a dynamic multipliation table written in JS
+     with error handling.
+*/
+
+html {
+  margin: auto;
+  padding: 0;
+  height: 100%;
+}
+
+/* borders added to make the page look more detailed */
+body {
+  font-size: 1em;
+  border-top: 1.2em solid #00adb5;
+  border-right: 1.5em ridge #00adb5;
+  margin: auto;
+  padding: 0%;
+  min-height: 100%;
+  min-width: 683px; /* best value found with dev. tools */
+}
+
+/* using an ID is fine when the HTML element is unique to the page */
+#page {
+  margin: 1%;
+}
+
+#topNavbar {
+  /*  lighter: 0,173,181,255
+      darker:  0,92,97,255
+      logoBG:  0,173,181,255      */
+  border: 0.8em ridge #00adb5;
+  white-space: nowrap;
+  background-color: #00adb5;
+  /* min-width: 94%; */
+  min-width: 620px;
+  height: auto;
+  overflow: inherit;
+  /* sanity check:
+     margin and padding set to 0 as sometimes the browsers
+     default margin and padding are undesirable for the
+     layout */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* used to list elements on the navbar with spacing */
+ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.8%;
+  margin: 0;
+}
+
+/* helps keep navbar items in a single line */
+li {
+  display: inline-block;
+  padding: 0;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+/* grouping these two elements to avoid code redundancy */
+a, h1 {
+  /*margin-right: 4%; */
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #e2ebeb;
+  text-shadow: -0.02em -0.02em black;
+}
+
+/* makes h1 un-selectable, which would otherwise make the navbar look less uniform */
+h1 {
+  user-select: none;
+}
+
+h2 {
+  margin: 1%;
+}
+
+/* class used for text underline */
+.emphasis {
+  text-decoration: underline;
+}
+
+.italics {
+  font-style: italic;
+}
+
+p {
+  text-align: center;
+  margin: 0.5%;
+  padding: 1%;
+}
+
+.basic-container {
+  width: 65%;
+  height: auto;
+  min-width: 485px;
+  min-height: 410px;
+  /* top right bottom left to center */
+  margin: 5% auto 5% auto;
+  border: 0.8em solid lightgrey;
+}
+
+/* using parent class for specific child-classes to reduce
+   code redundancy when styling elements that will be used
+   more than once */
+.logo-class {
+  overflow: hidden;
+  width: auto;
+  height: auto;
+  vertical-align: middle;
+  padding: 0;
+  margin: -100%; /* prevents img from extending the div container */
+}
+
+/* sizing for "bradley legg" logo */
+.logo-class.BL {
+  max-height: 2.6em;
+  max-width: 5em;
+}
+
+/* sizing for github icon */
+.logo-class.GH {
+  max-height: 2em;
+  max-width: 3em;
+}
+
+form {
+  /* Center the form on the page */
+  margin: 0 auto 0 auto;
+  width: auto;
+  padding: 5%;
+  border-top: 1em solid lightgrey;
+}
+
+.form-group {
+  margin: 1.5em auto 0 auto;
+  width: 60%;
+  padding: 1%;
+  /* adds border around each form-input for clarity */
+  border: 0.2em solid #00adb5;
+  /* nowrap prevents form text from resizing onto a newline */
+  white-space: nowrap;
+}
+
+label {
+  /* places the label on the same line as the input by default */
+  display: inline-block;
+  text-align: left;
+  width: 20%;
+  font-size: 1em;
+}
+
+/* adds some spacing to make elements appear in-line with center-page */
+input {
+  margin-left: 8%;
+}
+
+.button {
+  margin: 1.5em auto 0 auto;
+  padding: 5%;
+  font-size: 1.5em;
+  background-color: #005c61;
+  color: #e2ebeb;
+}
