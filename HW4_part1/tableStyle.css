@@ -1,0 +1,43 @@
+/*
+  Author: Bradley R. Legg, UMass Lowell Computer Science, bradley_legg@student.uml.edu
+  a. Bradley R. Legg
+  b. 9 August 2021
+  c. Webpage used to show a dynamic multipliation table written in JS
+     with error handling. Improved version.
+*/
+
+/* makes the table look more like a table and hides the border pre-generation */
+table, td {
+  border-collapse: collapse;
+  border: 0.12em solid black;
+  text-align: center;
+  margin: auto;
+}
+
+/* styling for the table when generated */
+table{
+  background-color: white;
+  table-layout: fixed;
+  border-spacing: 0;
+}
+
+/* styling for the error messages */
+.errorMsg{
+  margin: 5% 0 1% 0;
+  color: red;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* changes color of top row and top col to differentiate */
+td:nth-child(1) {
+  background-color: #005c61;
+  color: #e2ebeb;
+  font-weight: bold;
+  }
+
+tr:nth-child(1) {
+  background-color: #005c61;
+  color: #e2ebeb;
+  font-weight: bold;
+}

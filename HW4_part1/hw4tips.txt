@@ -1,0 +1,9 @@
+hw 4 make sure the slider changes the multiplication table on the fly and changes the num in the box
+at the same time
+
+they should be able to save the tables and delete them
+
+make sure the error message shows up in a appropriate location
+
+be sure to always shorten filepaths like in in_class_4 exampe1_source
+../example1_source/css/c01.css for ex
