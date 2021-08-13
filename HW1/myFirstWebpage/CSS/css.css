@@ -1,0 +1,153 @@
+html {
+  margin: auto;
+  padding: 0;
+  height: 100%;
+}
+
+/* borders added to make the page look more detailed */
+body {
+  font-size: 1em;
+  border-top: 1.2em solid #00adb5;
+  border-right: 1.5em ridge #00adb5;
+  margin: auto;
+  padding: 0%;
+  min-height: 100%;
+  min-width: 683px; /* best value found with dev. tools */
+}
+
+/* using an ID is fine when the HTML element is unique to the page */
+#page {
+  margin: 1%;
+}
+
+#topNavbar {
+  /*  lighter: 0,173,181,255
+      darker:  0,92,97,255
+      logoBG:  0,173,181,255      */
+  border: 0.8em ridge #00adb5;
+  white-space: nowrap;
+  background-color: #00adb5;
+  /* min-width: 94%; */
+  min-width: 620px;
+  height: auto;
+  overflow: inherit;
+  /* sanity check:
+     margin and padding set to 0 as sometimes the browsers
+     default margin and padding are undesirable for the
+     layout */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* used to list elements on the navbar with spacing */
+ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.8%;
+  margin: 0;
+}
+
+/* helps keep navbar items in a single line */
+li {
+  display: inline-block;
+  padding: 0;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+h1 {
+  
+}
+
+a {
+  /*margin-right: 4%; */
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgba(226,235,235,255);
+  text-shadow: -0.02em -0.02em black;
+}
+
+a:hover {
+  color: orange;
+}
+
+.on {
+  color: orange;
+}
+
+/* class used for text underline */
+.emphasis {
+  text-decoration: underline;
+}
+
+.italics {
+  font-style: italic;
+}
+
+p {
+  text-align: center;
+  margin: 0.5%;
+  padding: 1%;
+}
+
+.basic-container {
+  width: 65%;
+  height: auto;
+  min-width: 485px;
+  min-height: 410px;
+  /* top right bottom left to center */
+  margin: 5% auto 5% auto;
+  border: 0.8em solid lightgrey;
+}
+
+/* using parent class for specific child-classes to reduce
+   code redundancy when styling elements that will be used
+   more than once */
+.logo-class {
+  overflow: hidden;
+  width: auto;
+  height: auto;
+  vertical-align: middle;
+  padding: 0;
+  margin: -100%; /* prevents img from extending the div container */
+}
+
+/* sizing for "bradley legg" logo */
+.logo-class.BL {
+  max-height: 3em;
+  max-width: 5em;
+}
+
+/* sizing for github icon */
+.logo-class.GH {
+  max-height: 2em;
+  max-width: 3em;
+}
+
+/* using parent class for specific child-classes to reduce
+   code redundancy when styling elements that will be used
+   more than once */
+.image-Container {
+  margin: 0;
+  padding: 0;
+}
+
+.image-Container.PFP {
+  /* trying to put this border around the pfp image
+  border: 0.8em solid rgba(0,92,97,255);*/
+}
+
+#photo {
+  margin-top: 10%;
+  width: 20%;
+  height: 25%;
+
+  float: right;
+}
