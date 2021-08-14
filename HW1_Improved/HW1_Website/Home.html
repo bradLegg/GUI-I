@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<!--
+File: Home.html
+Author: Bradley R. Legg, UMass Lowell Computer Science, bradley_legg@student.uml.edu
+a. Bradley R. Legg
+b. 8 August 2021
+c. Basic webpage made for HW1 of GUI-I at UML. The "Home.html" file is used to
+   provide a landing page for the portfolio website. In the future, I plan on
+   improving this website outside of class with multiple CDNs & jQuery for
+   more repsonsiveness, though with a somewhat similar design.
+
+   The homepage will give a description to the purpose of the page and an
+   introduction.
+
+Published on GitHub pages at https://computerscienceman.github.io/GUI-I/HW1_Improved/HW1_Website/Home.html
+-->
+
+<!-- specifies the language of the page will be in english with an ISO lang. code -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Brad's Portfolio</title>
+    <link rel="stylesheet" href="CSS/css.css">
+  </head>
+  <body>
+    <div id="page">
+      <div id="topNavbar">
+        <ul class="ul-navbar">
+          <!-- https://hatchful.shopify.com/ logo created using hatchful, asset is free to use -->
+          <li class="li-navbar"><a class="navbar-link" href="https://hatchful.shopify.com/" target="_blank"><img class="logo-class BL" src="Images/logo_resized_cropped.png" alt="Webpage logo"></a></li>
+          <li class="li-navbar"><a class="navbar-link on" href="Home.html">HOME</a></li>
+          <li class="li-navbar"><a class="navbar-link" href="Work.html">WORK</a></li>
+          <li class="li-navbar"><a class="navbar-link" href="../HW1_Website/resources/B_Legg_UML_CV.pdf" target="_blank">CV</a></li>
+          <!-- https://github.com/logos free to use logo from github, linked to repository -->
+          <li class="li-navbar"><a href="https://github.com/computerScienceMan" target="_blank"><img class="logo-class GH" src="Images/GitHub-Mark-Light-64px.png" alt="Github icon"></a></li>
+        </ul>
+      </div>
+      <div class="div-Container PFP">
+        <img id="photo" src="Images/BLProfessional.jpg" alt="Bradley in a Suit and Tie ">
+      </div>
+      <div class="div-Container textHeading1">
+        <h1>Hello, I'm Bradley Legg</h1>
+      </div>
+      <div class="div-Container textDescription1">
+        <p class="description">I'm a senior pursuing a Bachelor's degree in <a class="text-link" href="https://www.uml.edu/Catalog/Undergraduate/Sciences/Departments/Computer-Science/Degree-pathways/DP-CS-General-2015.aspx"
+           target="_blank"> computer science</a> with a minor in <a class="text-link"
+           href="https://www.uml.edu/Catalog/Undergraduate/Business/Programs/Minors/OIS-minor.aspx"
+           target="_blank">Operations & Information Systems</a>.<br><br>I have
+           industry-level experience in writing security tests for user permissions
+           on a live product lifecycle management system for engineering managerial
+           processes.<br><br>I love to create and software gives me the means to
+           do so. I am actively pursuing work that will push me toward my career
+           goal of becoming a full-stack software engineer.<br></p>
+      </div>
+      <div class="div-Container button1">
+        <!-- simple link to appear as a button -->
+        <a class="navbar-link button" href="https://www.linkedin.com/in/bradleylegg/">Hire me</a>
+      </div>
+      <div class="div-Container footer">
+        <br><p id="footer-text">Copyright © 2021 Bradey Legg</p>
+      </div>
+    </div>
+     <!-- script link to JS best practice - put before the closing of the body tag -->
+    <script src="JavaScript/script.js"></script>
+  </body>
+</html>
