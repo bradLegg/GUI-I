@@ -1,0 +1,198 @@
+/*
+File: pageStyle.css
+Author: Bradley R. Legg, UMass Lowell Computer Science, bradley_legg@student.uml.edu
+a. Bradley R. Legg
+b. 15 August 2021
+c. CSS styling for the html to make the webpage look the part.
+*/
+
+/*****CSS RESET*******/
+
+/* CSS Reset credit: https://www.amberweinberg.com/how-to-code-a-simple-website-from-scratch-part-4-fancy-css/
+   The purpose of a CSS Reset is to remove default browser syling to make
+   the process of customizing each of the elements simpler and more unique
+   to the styles of the developer. This is a better process than the *
+   Kleene star method because not only specific elements have their CSS reset,
+   rather than all elements regardless of necessity. */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em,
+font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table,
+caption, tbody, tfoot, thead, tr, th, td {
+margin: 0; padding: 0; vertical-align: baseline;
+/* border-box sizing added to center HTML page with equal padding
+   see: https://dev.to/lennythedev/css-gotcha-how-to-fill-page-with-a-div-270j */
+box-sizing: border-box; }
+
+/*****CSS RESET*******/
+
+/*****COLOR SCHEME*******/
+/*
+#8D8741 olive
+#659DBD blue sky
+#FBEEC1 light tan
+#DAAD86 medium tan
+#BC986A dark tan
+*/
+/*****COLOR SCHEME*******/
+
+/* margin: a b c d -> a:top; b:right; c:bottom; d:left; */
+
+html {
+  /* padding -> page border dimensions */
+  padding: 2%;
+  background-color: #BC986A;
+
+  /* no-overflow with min values, though on a more dynamic page I would
+  prefer a % only or formatting solution instead */
+  min-width: 1280px;
+  min-height: 577px;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#page-wrapper {
+  /* centers element: 0 top bottom margin, browser sets left/right margins equally */
+  margin: 0 auto;
+
+  height: 100%;
+  /* no-overflow with min values, though on a more dynamic page I would
+  prefer a % only or formatting solution instead */
+  min-width: 1230px;
+  min-height: 527px;
+  background-color: #659DBD;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#page-title {
+  padding: 1% 0;
+  text-align: center;
+
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2em;
+  font-weight: 900;
+}
+
+.center-container {
+  width: 100%;
+  text-align: center;
+}
+
+.div-inline {
+  display: inline-block;
+  margin: 0 auto;
+  padding-bottom: 2%;
+  color: white;
+  font-weight: bold;
+
+  /* space them out */
+  margin-left: 9%;
+  margin-right: 9%;
+}
+
+#scrabble-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+
+  margin: 0 auto;
+
+  width: 80%;
+  height: 30%;
+  /* no-overflow with min values, though on a more dynamic page I would
+  prefer a % only or formatting solution instead */
+  min-width: 982px;
+  min-height: 184px;
+
+  /* rounded edges */
+  border-radius: 4%;
+  background-color: #FBEEC1;
+}
+
+/* making the scrabble line look more like part of a scrabble board */
+#scrabble-line {
+  list-style-type: none;
+}
+
+#scrabble-line > li {
+  display: inline-block;
+
+}
+
+#scrabble-container > li {
+  margin: 0 auto;
+}
+
+/* displaying the images as list items in an inline-block to show a single line
+of a scrablle board - this will be where the player tiles are dragged */
+.emptyTile{
+    content:url("./graphics_data/Single_Line_Tiles/scrabbleBlankTile.JPG");
+    height: 4em;
+    width: 4em;
+    object-fit: contain;
+}
+.doubleWordTile{
+    content:url("./graphics_data/Single_Line_Tiles/scrabbleDoubleWordTile.JPG");
+    height: 4em;
+    width: 4em;
+    object-fit: contain;
+}
+
+.doubleLetterTile{
+  content:url("./graphics_data/Single_Line_Tiles/scrabbleDoubleLetterTile.JPG");
+  height: 4em;
+  width: 4em;
+  object-fit: contain;
+}
+
+ol,
+.rules,
+.centered-h3 {
+  list-style-position: inside;
+  text-align: center;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+
+/* scrable tile holder */
+#rack{
+  width: 100%;
+  height: 15%;
+
+  /* fixes off-centering */
+  padding-inline-start: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image:url("./graphics_data/scrabble-tile-holder.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* size of the player tiles in the tile holder */
+#rack img{
+  width: 60px;
+  height: 60px;
+}
+
+#rack li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.button {
+  margin: 0.5%;
+}
